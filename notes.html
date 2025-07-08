@@ -38,3 +38,120 @@
   </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>নোটস - ARTSACADEMYWB</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .tab-buttons button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #0055a5;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 বিষয়ভিত্তিক নোটস</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="notes.html">নোটস</a></li>
+        <li><a href="blog.html">ব্লগ</a></li>
+        <li><a href="tips.html">টিপস</a></li>
+        <li><a href="subjects.html">বিষয়</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="tab-buttons">
+      <button onclick="showTab('history')">ইতিহাস</button>
+      <button onclick="showTab('geography')">ভূগোল</button>
+      <button onclick="showTab('english')">ইংরেজি</button>
+      <button onclick="showTab('bengali')">বাংলা</button>
+      <button onclick="showTab('polsc')">রাষ্ট্রবিজ্ঞান</button>
+      <button onclick="showTab('compapp')">কম্পিউটার অ্যাপ্লিকেশন</button>
+      <button onclick="showTab('retail')">রিটেল</button>
+    </div>
+
+    <div id="history" class="tab-content active">
+      <h2>📘 ইতিহাস</h2>
+      <p>📎 <a href="https://drive.google.com/history-ch1" target="_blank">অধ্যায় ১ - PDF</a></p>
+      <p>📎 <a href="https://drive.google.com/history-ch2" target="_blank">অধ্যায় ২ - PDF</a></p>
+    </div>
+
+    <div id="geography" class="tab-content">
+      <h2>📗 ভূগোল</h2>
+      <p>📎 <a href="https://drive.google.com/geo-ch1" target="_blank">নদী ব্যবস্থা - PDF</a></p>
+    </div>
+
+    <div id="english" class="tab-content">
+      <h2>📙 ইংরেজি</h2>
+      <p>📎 <a href="https://drive.google.com/english1" target="_blank">An Astrologer’s Day - PDF</a></p>
+    </div>
+
+    <div id="bengali" class="tab-content">
+      <h2>📕 বাংলা</h2>
+      <p>📎 <a href="https://drive.google.com/bangla1" target="_blank">প্রথম অধ্যায় - PDF</a></p>
+    </div>
+
+    <div id="polsc" class="tab-content">
+      <h2>📘 রাষ্ট্রবিজ্ঞান</h2>
+      <p>📎 <a href="https://drive.google.com/polsc1" target="_blank">অধ্যায় ১ - PDF</a></p>
+    </div>
+
+    <div id="compapp" class="tab-content">
+      <h2>💻 কম্পিউটার অ্যাপ্লিকেশন</h2>
+      <p>📎 <a href="https://drive.google.com/computer1" target="_blank">প্রথম অধ্যায় - PDF</a></p>
+    </div>
+
+    <div id="retail" class="tab-content">
+      <h2>🛍️ রিটেল</h2>
+      <p>📎 <a href="https://drive.google.com/retail1" target="_blank">অধ্যায় ১ - PDF</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JASMIR KHAN FOUNDER OF ARTSACADEMYWB</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
